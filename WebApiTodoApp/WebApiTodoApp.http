@@ -2,7 +2,7 @@
 
 
 
-GET {{WebApiTodoApp_HostAddress}}/api/AssignmentsController/
+GET {{WebApiTodoApp_HostAddress}}/api/assignments/
 Accept: application/json
 
 ###

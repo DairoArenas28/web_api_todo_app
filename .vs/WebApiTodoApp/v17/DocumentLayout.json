@@ -1,12 +1,92 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\WebApiTodoApp\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Dairo Arenas\\Desktop\\web_api_todo_app\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{12F81950-1A35-4616-B91E-B24F70F9313F}|WebApiTodoApp\\WebApiTodoApp.csproj|c:\\users\\dairo arenas\\desktop\\web_api_todo_app\\webapitodoapp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F81950-1A35-4616-B91E-B24F70F9313F}|WebApiTodoApp\\WebApiTodoApp.csproj|solutionrelative:webapitodoapp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dairo Arenas\\Desktop\\web_api_todo_app\\WebApiTodoApp\\Migrations\\20250517034952_InitialMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebApiTodoApp\\Migrations\\20250517034952_InitialMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F81950-1A35-4616-B91E-B24F70F9313F}|WebApiTodoApp\\WebApiTodoApp.csproj|c:\\users\\dairo arenas\\desktop\\web_api_todo_app\\webapitodoapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{12F81950-1A35-4616-B91E-B24F70F9313F}|WebApiTodoApp\\WebApiTodoApp.csproj|solutionrelative:webapitodoapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F81950-1A35-4616-B91E-B24F70F9313F}|WebApiTodoApp\\WebApiTodoApp.csproj|c:\\users\\dairo arenas\\desktop\\web_api_todo_app\\webapitodoapp\\contexts\\tododbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F81950-1A35-4616-B91E-B24F70F9313F}|WebApiTodoApp\\WebApiTodoApp.csproj|solutionrelative:webapitodoapp\\contexts\\tododbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Dairo Arenas\\Desktop\\web_api_todo_app\\WebApiTodoApp\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "WebApiTodoApp\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Dairo Arenas\\Desktop\\web_api_todo_app\\WebApiTodoApp\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "WebApiTodoApp\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAAF4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T03:50:59.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20250517034952_InitialMigration.cs",
+              "DocumentMoniker": "C:\\Users\\Dairo Arenas\\Desktop\\web_api_todo_app\\WebApiTodoApp\\Migrations\\20250517034952_InitialMigration.cs",
+              "RelativeDocumentMoniker": "WebApiTodoApp\\Migrations\\20250517034952_InitialMigration.cs",
+              "ToolTip": "C:\\Users\\Dairo Arenas\\Desktop\\web_api_todo_app\\WebApiTodoApp\\Migrations\\20250517034952_InitialMigration.cs",
+              "RelativeToolTip": "WebApiTodoApp\\Migrations\\20250517034952_InitialMigration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T03:49:52.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Dairo Arenas\\Desktop\\web_api_todo_app\\WebApiTodoApp\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApiTodoApp\\appsettings.json",
+              "ToolTip": "C:\\Users\\Dairo Arenas\\Desktop\\web_api_todo_app\\WebApiTodoApp\\appsettings.json",
+              "RelativeToolTip": "WebApiTodoApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-17T03:48:12.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TodoDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Dairo Arenas\\Desktop\\web_api_todo_app\\WebApiTodoApp\\Contexts\\TodoDbContext.cs",
+              "RelativeDocumentMoniker": "WebApiTodoApp\\Contexts\\TodoDbContext.cs",
+              "ToolTip": "C:\\Users\\Dairo Arenas\\Desktop\\web_api_todo_app\\WebApiTodoApp\\Contexts\\TodoDbContext.cs",
+              "RelativeToolTip": "WebApiTodoApp\\Contexts\\TodoDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T03:46:14.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
