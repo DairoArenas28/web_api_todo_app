@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "Hh9H+MkYfLw61hcHpl2aLGx91XELmiAvZakWHagUlFc=",
+  "Source": "WebApiTodoApp",
+  "BasePath": "_content/WebApiTodoApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

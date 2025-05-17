@@ -1,0 +1,8 @@
+@WebApiTodoApp_HostAddress = http://localhost:5144
+
+
+
+GET {{WebApiTodoApp_HostAddress}}/api/AssignmentsController/
+Accept: application/json
+
+###
