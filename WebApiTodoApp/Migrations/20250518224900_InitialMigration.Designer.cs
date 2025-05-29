@@ -11,7 +11,7 @@ using WebApiTodoApp.Contexts;
 namespace WebApiTodoApp.Migrations
 {
     [DbContext(typeof(TodoDbContext))]
-    [Migration("20250517034952_InitialMigration")]
+    [Migration("20250518224900_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -26,8 +26,11 @@ namespace WebApiTodoApp.Migrations
 
             modelBuilder.Entity("WebApiTodoApp.Models.Assignment", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -56,9 +59,12 @@ namespace WebApiTodoApp.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Password")
+                    b.Property<string>("PasswordHash")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
 
                     b.Property<string>("UserName")
                         .IsRequired()

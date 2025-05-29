@@ -11,6 +11,9 @@ namespace WebApiTodoApp.Contexts
 
         public DbSet<User> Users { get; set; }
         public DbSet<Assignment> Assignments { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<State> States { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -20,6 +23,18 @@ namespace WebApiTodoApp.Contexts
                 .WithOne(a => a.User)
                 .HasForeignKey(a => a.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Category>()
+                .HasMany(u => u.Assignments)
+                .WithOne(a => a.Category)
+                .HasForeignKey(a => a.CategoryId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<State>()
+             .HasMany(u => u.Assignments)
+             .WithOne(a => a.State)
+             .HasForeignKey(a => a.StateId)
+             .OnDelete(DeleteBehavior.Cascade);
 
             base.OnModelCreating(modelBuilder);
         }
