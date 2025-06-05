@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApiTodoApp.Contexts;
 using WebApiTodoApp.Dto.Auth;
@@ -9,6 +11,7 @@ using WebApiTodoApp.Services;
 
 namespace WebApiTodoApp.Controllers
 {
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
@@ -29,7 +32,7 @@ namespace WebApiTodoApp.Controllers
 
             if (user == null || !BCrypt.Net.BCrypt.Verify(loginDto.Password, user.PasswordHash))
             {
-                return Unauthorized("Usuario o contraseña incorrectos.");
+                return Unauthorized(new { error = "Usuario o contraseña incorrectos." });
             }
 
             var token = _tokenService.CreateToken(user);

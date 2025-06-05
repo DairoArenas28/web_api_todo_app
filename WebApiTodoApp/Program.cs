@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+ï»¿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -12,21 +12,23 @@ namespace WebApiTodoApp
     {
         public static void Main(string[] args)
         {
+            var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddDbContext<TodoDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
             );
 
-            // Leer configuración JWT
+            // Leer configuraciÃ³n JWT
             var jwtSection = builder.Configuration.GetSection("JWT");
             var key = jwtSection.GetValue<string>("Key");
-            // Validar que no esté vacío (opcional pero útil para depurar)
+            // Validar que no estÃ© vacÃ­o (opcional pero Ãºtil para depurar)
             if (string.IsNullOrEmpty(key))
             {
                 throw new Exception("JWT Key is missing in appsettings.json");
             }
-            // Configurar autenticación JWT
+            // Configurar autenticaciÃ³n JWT
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
             {
@@ -51,7 +53,7 @@ namespace WebApiTodoApp
 
                         var result = System.Text.Json.JsonSerializer.Serialize(new
                         {
-                            message = "No autorizado: token inválido o no proporcionado."
+                            message = "No autorizado: token invÃ¡lido o no proporcionado."
                         });
 
                         return context.Response.WriteAsync(result);
@@ -82,10 +84,23 @@ namespace WebApiTodoApp
                 options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
                 options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
             });
+            // 1. Configurar la polÃ­tica CORS
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins, policy =>
+                {
+                    policy.WithOrigins("http://localhost:5173") // o .AllowAnyOrigin() solo en desarrollo
+                    //policy.AllowAnyOrigin() // o .AllowAnyOrigin() solo en desarrollo
+                          .AllowAnyHeader()
+                          .AllowCredentials();
+                });
+            });
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
 
             var app = builder.Build();
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
